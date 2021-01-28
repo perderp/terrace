@@ -1,0 +1,36 @@
+.p-header{
+    // background:url(../../../../../tinified/common/header-background.png);
+    background:url(../../../../../../public/release/tinified/common/header-background.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    position:relative;
+    &__inner{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        height:100vh;
+    }
+    &__img{
+        text-align:center;
+        width: 100%;
+        &--title{}
+        &--logo{}
+    }
+    .hashtag{
+        position:absolute;
+        top:9vh;
+        left:7.2vw;
+        p{
+            color:$colortext01;
+        }
+    }
+    .scroll{
+        position:fixed;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+        z-index:0;
+    }
+}

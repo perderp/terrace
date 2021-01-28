@@ -2,6 +2,57 @@
 @import "../core/**/*";
 
 
+
+.story{
+    position:relative;
+    z-index:1;
+    &__inner{}
+    &__top{
+        text-align:center;
+    }
+    &__bottom{
+        p{
+            @include font-line(18);
+        }
+    }
+}
+
+.info{
+    position:relative;
+    z-index:1;
+    &__inner{}
+    &__top{
+        text-align: center;
+    }
+    &__bottom{}
+    &__table{}
+    &__tr{
+        position:relative;
+        
+    }
+    &__td{
+        padding:2em 0;
+        position:relative;
+        @include font-line(20);
+        span{
+            @include font-line(28);
+        }
+        &--title{
+            color:$colortext-secondary;
+            width:100px;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            width:100px;
+            bottom:0;
+            left:20%;
+            transform:translateX(-80%);
+            border-bottom:1px solid $colortext-secondary;
+        }
+    }
+}
+
 .precaution{
     position: relative;
     z-index: 1;
@@ -26,14 +77,14 @@
             &__title{
                 color: white;
                 font-weight: 700;
-                @include font-line(16)
+                @include font-line(16);
             }
             h2{
                 color: white;
                 margin-left: -10px;
                 font-weight: 700;
                 letter-spacing: -1px;
-                @include font-line(16)
+                @include font-line(16);
                 @include is-sp{
                     @include font-line(14);
                 }
