@@ -1,0 +1,24 @@
+.l-container {
+    padding: 20px 0;
+    &.is-column2 {
+      display: flex;
+      margin: 0 auto;
+  
+      @include is-sp {
+        padding-top: 20px;
+        width: 100%;
+      }
+  
+      @include is-pc {
+        width: 100%;
+        margin: 0 auto;
+      }
+      @include is-pc02{
+        width: 100%;
+        margin: 0 auto;
+    }
+    }
+    &__left,  &__right{
+      width: 50%;
+    }
+}
