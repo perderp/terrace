@@ -108,6 +108,7 @@ Additional information about terrace.
 | Member                                        | Role     |
 | --------------------------------------------- | -------- |
 | [Jaspher ](https://github.com/perderp)        | Core Dev |
+| [Dave ](https://github.com/DaveCanucot)        | Dev |
 
 
 ## <a name='Contribute'></a> :handshake:Contribute
