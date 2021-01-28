@@ -1,0 +1,29 @@
+.p-footer{
+    background:url(../../../../../../public/release/tinified/common/header-background.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center bottom;
+    position:relative;
+    &__inner{}
+    &__top{}
+    &__bottom{}
+    &__img{
+        text-align:center;
+    }
+    .copyright{
+
+        text-align: center;
+        p,a{
+            color:$colortext01;
+        }
+    }
+    .social{
+        justify-content: center;
+        .instagram,
+        .twitter,
+        .facebook{
+            padding:0 1em;
+        }
+    }
+}
