@@ -8,12 +8,14 @@
     <!--main css-->
     <link rel="stylesheet" href="public/release/minified/pc/css/style.css" />
     <!--page css-->
+    <link rel="stylesheet" href="public/release/minified/pc/css/page/fullpage.css" />
+
     <link rel="stylesheet" href="public/release/minified/pc/css/page/index.css" />
 </head>
 
 <body>
-    <main>
-        <section class="p-header">
+    <main id="fullpage">
+        <section class="section p-header">
             <div class="l-wrap">
                 <div class="l-container p-header__inner">
                     <div class="p-header__img">
@@ -35,7 +37,7 @@
                 </div>
             </div>
         </section>
-        <section class="story">
+        <section class="section story">
             <div class="l-wrap">
                 <div class="l-container story__inner">
                     <div class="story__top">
@@ -55,7 +57,7 @@
                 </div>
             </div>
         </section>
-        <section class="info">
+        <section class="section info">
             <div class="l-wrap">
                 <div class="l-container info__inner">
                     <div class="info__top">
@@ -96,14 +98,13 @@
                 </div>
             </div>
         </section>
-        <section class="precaution">
+        <section class="section precaution">
             <div class="l-wrap">
                 <div class="l-container precaution__inner">
                     <div class="precaution__top">
                         <h2>ご利用上の注意</h2>
                     </div>
                     <div class="u-mt-30 precaution__bottom">
-
                         <div class="o1">
                             <h2>【ご利⽤いただけない⽅】</h2>
                             <p>○18歳未満の⽅はご利⽤いただけません。3⼈部屋のみ小学生以上であれば、同性の親とのみご利用いただけます。
@@ -155,13 +156,11 @@
                                 ○施設近隣は住宅街です。屋外での⼤声での会話はお控えください。
                             </p>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </section>
-        <section class="p-footer">
+        <section class="section fp-auto-height p-footer">
             <div class="l-wrap">
                 <div class="l-container p-footer__inner">
                     <div class="p-footer__top u-mt-90">
@@ -196,7 +195,16 @@
         </section>
     </main>
     <!-- MAIN JS-->
+    <script type="text/javascript" src="public/release/uglified/fullpage.js"></script>
+    <script type="text/javascript" src="public/release/uglified/scrolloverflow.js"></script>
     <script type="text/javascript" src="public/release/uglified/all.js"></script>
+    <script>
+        new fullpage("#fullpage", {
+            autoScrolling:true,
+            scrollBar:true,
+            scrollOverflow:true,
+        });
+    </script>
 </body>
 
 </html>
