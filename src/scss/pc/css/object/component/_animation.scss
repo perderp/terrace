@@ -1,0 +1,38 @@
+
+.followThrough-in{
+    animation:followThrough-in .5s linear both;
+}
+.followThrough-out{
+    animation:followThrough-out .5s linear both;
+}
+
+.line-width{
+    position:relative;
+    animation:line-width 1s linear both;
+}
+
+@keyframes followThrough-in{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+}
+@keyframes followThrough-out{
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform:translateX(100%);
+    }
+}
+
+@keyframes line-width{
+    0%{
+        transform:matrix(1 0 0 0 0 0);
+    }
+    100%{
+        transform:matrix(1 0 0 -1 1 0.0244141);
+    }
+}

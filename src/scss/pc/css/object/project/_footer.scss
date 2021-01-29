@@ -33,4 +33,19 @@
             }
         }
     }
+    .hashtag{
+        margin-left:7.2vw;
+        padding-top:20px;
+        p{
+            color:$colortext01;
+            @include is-sp{
+                @include font-line(14);
+            }
+        }
+
+        @include is-sp{
+            margin-left:10px;
+            padding-top:10px;
+        }
+    }
 }
