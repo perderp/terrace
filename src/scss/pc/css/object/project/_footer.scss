@@ -1,5 +1,5 @@
 .p-footer{
-    background:url(../../../../../../public/release/tinified/common/header-background.png);
+    background:url(../../../../../../public/release/tinified/common/background.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,12 +10,16 @@
     &__bottom{}
     &__img{
         text-align:center;
+        img{
+            width:70%;
+        }
     }
     .copyright{
 
         text-align: center;
         p,a{
             color:$colortext01;
+            @include font-line(14);
         }
     }
     .social{
@@ -24,6 +28,9 @@
         .twitter,
         .facebook{
             padding:0 1em;
+            img{
+                width:80%
+            }
         }
     }
 }
