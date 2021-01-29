@@ -1,6 +1,5 @@
 .p-header{
-    // background:url(../../../../../tinified/common/header-background.png);
-    background:url(../../../../../../public/release/tinified/common/header-background.png);
+    background:url(../../../../../../public/release/tinified/common/background.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -15,8 +14,16 @@
     &__img{
         text-align:center;
         width: 100%;
-        &--title{}
-        &--logo{}
+        &--title{
+            img{
+                width:80%;
+            }
+        }
+        &--logo{
+            img{
+                width:80%;
+            }
+        }
     }
     .hashtag{
         position:absolute;
@@ -24,6 +31,10 @@
         left:7.2vw;
         p{
             color:$colortext01;
+        }
+
+        @include is-sp{
+            top:20px;
         }
     }
     .scroll{

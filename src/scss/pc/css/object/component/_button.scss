@@ -1,1 +1,10 @@
-.c-btn{}
+.c-btn{
+    background-color:#621F04;
+    padding:1em;
+    p{
+        padding:0 0.5em;
+        color:$colortext01;
+        @include font-line(40);
+        font-weight: 700;
+    }
+}
