@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const scrollTop = document.querySelector('.scrolltop');
+  const scrollTop = document.querySelector('.follow');
+  const btnScroll = document.querySelector('.follow__btn');
   // FOR HEADER TOGGLE SHOW WHEN SCROLL
   let pageY = 0;
   let prevY = 0;
@@ -7,27 +8,37 @@ document.addEventListener('DOMContentLoaded', () => {
   // init
   if (window.pageYOffset === document.body.offsetTop) {
     scrollTop.style.display = "none";
+    btnScroll.style.display ="none";
   }
   window.onscroll = () => {
     prevY = pageY;
     pageY = window.pageYOffset;
-    //console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
-    if (window.pageYOffset === document.body.offsetTop) {
-      // console.log("you're at the top of the page");
-      scrollTop.style.display = "none";
-
-    } else if (pageY - prevY < 0) {
-      // console.log("is scrolling up");
+    // console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
+    if(pageY >=  900){
       scrollTop.style.display = "block";
-    } else if ((pageY - prevY) > 0) {
-      // console.log("is scrolling down");
+      btnScroll.classList.add("followThrough-in");
+      btnScroll.classList.remove("followThrough-out");
+    }else if (pageY != 900 ){
       scrollTop.style.display = "block";
-
+      btnScroll.classList.remove("followThrough-in");
+      btnScroll.classList.add("followThrough-out");
     }
-    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-      //  console.log("you're at the bottom of the page");
-      scrollTop.style.display = "block";
-    }
+    // if (window.pageYOffset === document.body.offsetTop) {
+    //   // console.log("you're at the top of the page");
+    //   scrollTop.style.display = "none";
+
+    // } else if (pageY - prevY < 0) {
+    //   // console.log("is scrolling up");
+    //   scrollTop.style.display = "block";
+    // } else if ((pageY - prevY) > 0) {
+    //   // console.log("is scrolling down");
+    //   scrollTop.style.display = "block";
+
+    // }
+    // if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+    //   //  console.log("you're at the bottom of the page");
+    //   scrollTop.style.display = "block";
+    // }
 
   };
 });

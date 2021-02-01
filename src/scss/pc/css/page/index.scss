@@ -14,6 +14,8 @@ section{
 .story{
     position:relative;
     z-index:1;
+    padding-top:260px;
+    padding-bottom:280px;
     &__inner{}
     &__top{
         text-align:center;
@@ -23,11 +25,60 @@ section{
             @include font-line(18);
         }
     }
+    &__animate{}
+    &__above{
+        width:100%;
+        text-align:center;
+        transform:translateX(14.2%);
+    }
+    &__below{
+        margin-top:1em;
+        width:100%;
+        text-align:center;
+        transform:translateX(-14.2%);
+    }
+}
+.follow{
+    &__btn{
+        position:fixed;
+        z-index:99;
+        width: 290px;
+        bottom:30px;
+        right:0;
+        align-items: center;
+
+        @include is-pc02{
+            width:27%;
+        }
+    }
+}
+.sp-follow{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &__inner{
+        width: 100%;
+    }
+    .box{
+        width: 20%;
+        background-color:#000;
+        align-items: center;
+        justify-content: center;
+        img{
+            padding:0.5em;
+        }
+    }
+    &__btn{
+        width:80%;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
 
 .info{
     position:relative;
     z-index:1;
+    padding-bottom:175px;
     &__inner{}
     &__top{
         text-align: center;
