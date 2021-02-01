@@ -2,6 +2,15 @@
 @import "../core/**/*";
 
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    scroll-snap-align: start;
+}
+
+
 .story{
     position:relative;
     z-index:1;
@@ -48,6 +57,62 @@
             left:20%;
             transform:translateX(-80%);
             border-bottom:1px solid $colortext-secondary;
+            @include is-sp{
+                left:18vw;
+                width:20vw;
+            }
+        }
+    }
+}
+
+.precaution{
+    position: relative;
+    z-index: 1;
+    padding: 55px 0;
+    background-color: #111111;
+    color: white;
+    &__inner{}
+    &__top{
+        text-align:center;
+        h2{
+            color: white;
+            @include font-line(22);
+            @include is-sp{
+            @include font-line(16);
+            }
+        }
+    }
+    &__bottom{
+
+        .o1{
+            margin-bottom: 30px;
+            &__title{
+                color: white;
+                font-weight: 700;
+                @include font-line(16);
+            }
+            h2{
+                color: white;
+                margin-left: -10px;
+                font-weight: 700;
+                letter-spacing: -1px;
+                @include font-line(16);
+                @include is-sp{
+                    @include font-line(14);
+                }
+            }
+            p{
+                white-space: pre-line;
+                color: white;
+                letter-spacing: -1px;
+                @include is-sp{
+                    @include font-line(14);
+                }
+            }
+
+        }
+        :last-child{
+            margin-bottom: 0;
         }
     }
 }
