@@ -1,20 +1,10 @@
 @charset "UTF-8";
 @import "../core/**/*";
 
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-section{
-    scroll-snap-align: start;
-}
 
 .story{
     position:relative;
     z-index:1;
-    margin-top:260px;
-    margin-bottom:280px;
     &__inner{}
     &__top{
         text-align:center;
@@ -22,32 +12,13 @@ section{
     &__bottom{
         p{
             @include font-line(18);
-
-            @include is-tablet{
-                @include font-line(16);
-            }
-
-            @include is-sp{
-                @include font-line(14);
-            }
         }
-    }
-}
-.follow{
-    &__btn{
-        position:fixed;
-        z-index:99;
-        width: 330px;
-        bottom:30px;
-        right:0;
-        align-items: center;
     }
 }
 
 .info{
     position:relative;
     z-index:1;
-    margin-bottom:175px;
     &__inner{}
     &__top{
         text-align: center;
@@ -62,100 +33,21 @@ section{
         padding:2em 0;
         position:relative;
         @include font-line(20);
-        @include is-tablet{
-            @include font-line(18);
-        }
-        @include is-sp{
-            @include font-line(14);
-        }
         span{
             @include font-line(28);
-
-            @include is-tablet{
-                @include font-line(24);
-            }
-
-            @include is-sp{
-                @include font-line(20);
-            }
         }
         &--title{
             color:$colortext-secondary;
-            width:130px;
-            @include font-line(20);
-            @include is-tablet{
-                @include font-line(18);
-                width:120px;
-            }
-            @include is-sp{
-                @include font-line(14);
-                width:100px;
-            }
+            width:100px;
         }
         &::after{
             content:'';
             position: absolute;
             width:100px;
             bottom:0;
-            left:100px;
+            left:20%;
             transform:translateX(-80%);
             border-bottom:1px solid $colortext-secondary;
-            @include is-sp{
-                left:18vw;
-                width:20vw;
-            }
-        }
-    }
-}
-
-.precaution{
-    position: relative;
-    z-index: 2;
-    padding: 55px 0;
-    background-color: #111111;
-    color: white;
-    &__inner{}
-    &__top{
-        text-align:center;
-        h2{
-            color: white;
-            @include font-line(22);
-            @include is-sp{
-            @include font-line(16);
-            }
-        }
-    }
-    &__bottom{
-
-        .o1{
-            margin-bottom: 30px;
-            &__title{
-                color: white;
-                font-weight: 700;
-                @include font-line(16);
-            }
-            h2{
-                color: white;
-                margin-left: -10px;
-                font-weight: 700;
-                letter-spacing: -1px;
-                @include font-line(16);
-                @include is-sp{
-                    @include font-line(14);
-                }
-            }
-            p{
-                white-space: pre-line;
-                color: white;
-                letter-spacing: -1px;
-                @include is-sp{
-                    @include font-line(14);
-                }
-            }
-
-        }
-        :last-child{
-            margin-bottom: 0;
         }
     }
 }
