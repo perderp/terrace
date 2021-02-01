@@ -115,6 +115,16 @@
                 transform-origin: 0 100%;
             }
         }
-
+    }
+    .box{
+        position:absolute;
+        top:9vh;
+        right:0;
+        img{
+            padding:0.5em;
+        }
+        @include is-sp{
+            top:20px;
+        }
     }
 }
