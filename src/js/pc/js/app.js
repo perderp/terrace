@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = () => {
     prevY = pageY;
     pageY = window.pageYOffset;
-    // console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
-    if(pageY >=  900){
+    console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
+    if(pageY >=  500){
       scrollTop.style.display = "block";
       btnScroll.classList.add("followThrough-in");
       btnScroll.classList.remove("followThrough-out");
-    }else if (pageY != 900 ){
+    }else if (pageY != 500 && pageY <= 0 ){
       scrollTop.style.display = "block";
       btnScroll.classList.remove("followThrough-in");
       btnScroll.classList.add("followThrough-out");

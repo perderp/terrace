@@ -27,15 +27,26 @@
     }
     &__animate{}
     &__above{
-        width:100%;
+        width:544px;
+        margin:0 auto;
         text-align:center;
-        transform:translateX(14.2%);
+        transform:translateX(270px);
+        @include is-tablet02{
+            width:100%;
+            transform:translateX(272px);
+        }
     }
     &__below{
         margin-top:1em;
-        width:100%;
+        width:544px;
+        margin:0 auto;
         text-align:center;
-        transform:translateX(-14.2%);
+        transform:translateX(-270px);
+        @include is-tablet02{
+            width:100%;
+            transform:translateX(-272px);
+        }
+
     }
 }
 .follow{
@@ -132,7 +143,8 @@
             transform:translateX(-80%);
             border-bottom:1px solid $colortext-secondary;
             @include is-sp{
-                left:18vw;
+                left:85%;
+                transform:translateX(-70%);
                 width:20vw;
             }
         }

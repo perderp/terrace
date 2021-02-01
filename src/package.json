@@ -41,6 +41,7 @@
         "postcss-flexbugs-fixes": "^5.0.2",
         "postcss-normalize": "^9.0.0",
         "postcss-preset-env": "^6.7.0",
-        "sass-module-importer": "^1.4.0"
+        "sass-module-importer": "^1.4.0",
+        "vivus": "^0.4.5"
     }
 }
