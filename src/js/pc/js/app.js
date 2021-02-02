@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const scrollTop = document.querySelector('.follow');
   const btnScroll = document.querySelector('.follow__btn');
+  const storyLines01 = document.querySelector('.storyLines01');
+  const storyLines02 = document.querySelector('.storyLines02');
   // FOR HEADER TOGGLE SHOW WHEN SCROLL
   let pageY = 0;
   let prevY = 0;
@@ -13,16 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = () => {
     prevY = pageY;
     pageY = window.pageYOffset;
-    console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
+    // console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
     if(pageY >=  500){
       scrollTop.style.display = "block";
+      // RESERVATION
       btnScroll.classList.add("followThrough-in");
       btnScroll.classList.remove("followThrough-out");
+
+      // STORY SECTION
+      storyLines01.style.display="block";
+      storyLines02.style.display="block";
+      storyLines01.classList.add('story-above');
+      storyLines02.classList.add('story-below');
     }else if (pageY != 500 && pageY <= 0 ){
       scrollTop.style.display = "block";
       btnScroll.classList.remove("followThrough-in");
       btnScroll.classList.add("followThrough-out");
     }
+    
     // if (window.pageYOffset === document.body.offsetTop) {
     //   // console.log("you're at the top of the page");
     //   scrollTop.style.display = "none";
@@ -54,3 +64,18 @@ function toggleHamburger(){
 }
 
 ham.addEventListener("click", toggleHamburger)
+
+
+const gra = function (min, max) {
+  return Math.random() * (max - min) + min;
+}
+const init = function () {
+  let items = document.querySelectorAll('section');
+  for (let i = 0; i < items.length; i++) {
+      items[i].style.background = randomColor({
+          luminosity: 'light'
+      });
+  }
+  cssScrollSnapPolyfill()
+}
+init();
