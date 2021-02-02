@@ -148,6 +148,18 @@
     animation: story-below-draw 2500ms ease 0ms forwards;
 }
 
+.header-white{
+    stroke-dasharray: 604 606;
+    stroke-dashoffset: 605;
+    animation: header-white-draw 2500ms ease 0ms forwards;
+}
+
+@keyframes header-white-draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 @keyframes story-above-draw {
     100% {
         stroke-dashoffset: 0;

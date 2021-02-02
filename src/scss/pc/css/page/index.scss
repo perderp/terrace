@@ -24,30 +24,31 @@ section{
     &__bottom{
         p{
             @include font-line(18);
+            @include is-sp{
+                @include font-line(14);
+            }
         }
     }
     &__animate{}
-    &__above{
-        width:544px;
-        margin:0 auto;
-        text-align:center;
-        transform:translateX(270px);
-        @include is-tablet02{
-            width:100%;
-            transform:translateX(272px);
+
+    .story-svg{
+        &__top{
+            position:absolute;
+            left:50%;
+            top:200px;
+
+        }
+        &__bottom{
+            position: absolute;
+            bottom:200px;
+            right:50%;
+
         }
     }
-    &__below{
-        margin-top:1em;
-        width:544px;
-        margin:0 auto;
-        text-align:center;
-        transform:translateX(-270px);
-        @include is-tablet02{
-            width:100%;
-            transform:translateX(-272px);
-        }
-
+    
+    .storyLines01,
+    .storyLines02{
+        display:none;
     }
 }
 .follow{
@@ -96,37 +97,79 @@ section{
         text-align: center;
     }
     &__bottom{}
-    &__table{}
-    &__tr{
-        position:relative;
-        
+    &__table{
+        width: 100%;
     }
-    &__td{
-        padding:2em 0;
-        position:relative;
-        @include font-line(20);
-        span{
-            @include font-line(28);
-        }
-        &--title{
-            color:$colortext-secondary;
-            width:100px;
-        }
+    &__group{
+        position: relative;
+        width: 100%;
+        align-items: center;
         &::after{
             content:'';
             position: absolute;
             width:100px;
             bottom:0;
-            left:20%;
-            transform:translateX(-80%);
+            left:22%;
             border-bottom:1px solid $colortext-secondary;
+            @include is-tablet{
+                left:50%;
+                transform:translateX(-50%);
+                width:20vw;
+            }
             @include is-sp{
-                left:85%;
-                transform:translateX(-70%);
+                left:50%;
+                transform:translateX(-50%);
                 width:20vw;
             }
         }
     }
+
+    &__left,
+    &__right{
+        padding:2em 0;
+    }
+    &__left{
+        width: 18%;
+        @include font-line(18);
+
+        @include is-tablet{
+            @include font-line(16);
+        }
+        @include is-tablet02{
+            width:25%;
+        }
+        @include is-sp{
+            @include font-line(14);
+            width:30%;
+        }
+    }
+    &__right{
+        width: 72%;
+        @include font-line(20);
+        
+        @include is-tablet{
+            @include font-line(16);
+        }
+        @include is-tablet02{
+            width:75%;
+        }
+        @include is-sp{
+            @include font-line(14);
+            width:70%;
+        }
+        span{
+            @include font-line(28);
+
+            @include is-tablet{
+                @include font-line(20);
+            }
+            @include is-sp{
+                @include font-line(20);
+            }
+        }
+    }
+
+
 }
 
 .precaution{
