@@ -29,7 +29,7 @@
             }
         }
         &--logo{
-            img{
+            svg{
                 width:80%;
                 @include is-pc02{
                     width:70%;
@@ -42,20 +42,31 @@
                 }
             }
         }
+
+        &--white{
+            svg{
+                position:absolute;
+                top:132px;
+                right: 50%;
+            }
+        }
     }
     .hashtag{
         position:absolute;
         top:9vh;
         left:7.2vw;
+        @include is-tablet{
+            top:4vh;
+        }
+        
+        @include is-sp{
+            top:20px;
+        }
         p{
             color:$colortext01;
             @include is-sp{
                 @include font-line(14);
             }
-        }
-
-        @include is-sp{
-            top:20px;
         }
     }
     .scroll{
@@ -120,11 +131,15 @@
         position:absolute;
         top:9vh;
         right:0;
-        img{
-            padding:0.5em;
+        @include is-tablet{
+            top:4vh;
         }
         @include is-sp{
             top:20px;
         }
+        img{
+            padding:0.5em;
+        }
+
     }
 }
