@@ -1,5 +1,5 @@
 .p-header{
-    background:url(../../../../../../public/release/img/common/background.png);
+    background:url(../../../../../../public/release/img/common/bg.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,29 +17,16 @@
         &--title{
             img{
                 width:80%;
-                @include is-pc02{
-                    width:70%;
-                }
-                @include is-tablet{
-                    width:70%;
-                }
-                @include is-sp{
-                    width:70%;
-                }
+            }
+            padding-bottom:50px;
+            @include is-pc{
+                padding-bottom:100px;
             }
         }
         &--logo{
             svg{
                 width:80%;
-                @include is-pc02{
-                    width:70%;
-                }
-                @include is-tablet{
-                    width:70%;
-                }
-                @include is-sp{
-                    width:70%;
-                }
+
             }
         }
 
@@ -80,7 +67,6 @@
             padding: 10px 10px 110px;
             color: #fff;
             font-size: 14px;
-            // font-family: 'Josefin Sans', sans-serif;
             line-height: 1;
             letter-spacing: .2em;
             text-transform: uppercase;
@@ -88,6 +74,10 @@
             writing-mode: vertical-lr;
             transition: .2s;
             overflow: hidden;
+
+            @include is-sp{
+                font-size:12px;
+            }
             &::after {
                 content: '';
                 position: absolute;

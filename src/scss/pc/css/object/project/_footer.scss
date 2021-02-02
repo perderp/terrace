@@ -1,5 +1,5 @@
 .p-footer{
-    background:url(../../../../../../public/release/img/common/background.png);
+    background:url(../../../../../../public/release/img/common/bg.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,6 +20,10 @@
         p,a{
             color:$colortext01;
             @include font-line(14);
+
+            @include is-sp{
+                @include font-line(12);
+            }
         }
     }
     .social{

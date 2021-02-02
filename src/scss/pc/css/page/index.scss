@@ -16,6 +16,14 @@ section{
     z-index:1;
     padding-top:260px;
     padding-bottom:280px;
+    @include is-tablet{
+        padding-top:145px;
+        padding-bottom:174px;
+    }
+    @include is-sp{
+        padding-top:145px;
+        padding-bottom:174px;
+    }
     overflow:hidden;
     &__inner{}
     &__top{
@@ -37,11 +45,27 @@ section{
             left:50%;
             top:200px;
 
+            @include is-tablet{
+                top:60px;
+            }
+
+            @include is-sp{
+                top:60px;
+            }
+
         }
         &__bottom{
             position: absolute;
             bottom:200px;
             right:50%;
+
+            @include is-tablet{
+                bottom:82px;
+            }
+
+            @include is-sp{
+                bottom:82px;
+            }
 
         }
     }
@@ -92,6 +116,12 @@ section{
     position:relative;
     z-index:1;
     padding-bottom:175px;
+    @include is-tablet{
+        padding-bottom:64px;
+    }
+    @include is-sp{
+        padding-bottom:64px;
+    }
     &__inner{}
     &__top{
         text-align: center;
@@ -130,6 +160,8 @@ section{
     }
     &__left{
         width: 18%;
+        color:$colortext-secondary;
+        font-weight: 700;
         @include font-line(18);
 
         @include is-tablet{
@@ -183,6 +215,7 @@ section{
         text-align:center;
         h2{
             color: white;
+            font-weight: 700;
             @include font-line(22);
             @include is-sp{
             @include font-line(16);
