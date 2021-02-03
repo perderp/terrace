@@ -2,9 +2,29 @@
 @import "../core/**/*";
 
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    scroll-snap-align: start;
+}
+
+
 .story{
     position:relative;
     z-index:1;
+    padding-top:260px;
+    padding-bottom:280px;
+    @include is-tablet{
+        padding-top:145px;
+        padding-bottom:174px;
+    }
+    @include is-sp{
+        padding-top:145px;
+        padding-bottom:174px;
+    }
+    overflow:hidden;
     &__inner{}
     &__top{
         text-align:center;
@@ -12,42 +32,231 @@
     &__bottom{
         p{
             @include font-line(18);
+            @include is-tablet02{
+                @include font-line(16);
+            }
+            @include is-sp{
+                @include font-line(14);
+            }
         }
+    }
+    &__animate{}
+
+    .story-svg{
+        &__top{
+            position:absolute;
+            left:50%;
+            top:200px;
+
+            @include is-tablet{
+                top:60px;
+            }
+
+            @include is-sp{
+                top:60px;
+            }
+
+        }
+        &__bottom{
+            position: absolute;
+            bottom:200px;
+            right:50%;
+
+            @include is-tablet{
+                bottom:82px;
+            }
+
+            @include is-sp{
+                bottom:82px;
+            }
+
+        }
+    }
+    
+    .storyLines01,
+    .storyLines02{
+        display:none;
+    }
+}
+.follow{
+    &__btn{
+        position:fixed;
+        z-index:99;
+        width: 290px;
+        bottom:30px;
+        right:0;
+        align-items: center;
+
+        @include is-pc02{
+            width:27%;
+        }
+    }
+}
+.sp-follow{
+    width: 100%;
+    &__inner{
+        z-index: 2;
+        position:fixed;
+        width: 100%;
+        bottom:0;
+    }
+    .box{
+        width: 20%;
+        background-color:#000;
+        align-items: center;
+        justify-content: center;
+        img{
+            padding:0.5em;
+        }
+    }
+    &__btn{
+        width:80%;
+        align-items: center;
+        justify-content: flex-end;
     }
 }
 
 .info{
     position:relative;
     z-index:1;
+    padding-bottom:175px;
+    @include is-tablet{
+        padding-bottom:64px;
+    }
+    @include is-sp{
+        padding-bottom:64px;
+    }
     &__inner{}
     &__top{
         text-align: center;
     }
     &__bottom{}
-    &__table{}
-    &__tr{
-        position:relative;
-        
+    &__table{
+        width: 100%;
     }
-    &__td{
-        padding:2em 0;
-        position:relative;
-        @include font-line(20);
-        span{
-            @include font-line(28);
-        }
-        &--title{
-            color:$colortext-secondary;
-            width:100px;
-        }
+    &__group{
+        position: relative;
+        width: 100%;
+        align-items: center;
         &::after{
             content:'';
             position: absolute;
             width:100px;
             bottom:0;
-            left:20%;
-            transform:translateX(-80%);
+            left:22%;
             border-bottom:1px solid $colortext-secondary;
+            @include is-tablet{
+                left:50%;
+                transform:translateX(-50%);
+                width:20vw;
+            }
+            @include is-sp{
+                left:50%;
+                transform:translateX(-50%);
+                width:20vw;
+            }
+        }
+    }
+
+    &__left,
+    &__right{
+        padding:2em 0;
+    }
+    &__left{
+        width: 18%;
+        color:$colortext-secondary;
+        font-weight: 700;
+        @include font-line(18);
+
+        @include is-tablet{
+            @include font-line(16);
+        }
+        @include is-tablet02{
+            width:25%;
+        }
+        @include is-sp{
+            @include font-line(14);
+            width:30%;
+        }
+    }
+    &__right{
+        width: 72%;
+        @include font-line(20);
+        
+        @include is-tablet{
+            @include font-line(16);
+        }
+        @include is-tablet02{
+            width:75%;
+        }
+        @include is-sp{
+            @include font-line(14);
+            width:70%;
+        }
+        span{
+            @include font-line(28);
+
+            @include is-tablet{
+                @include font-line(20);
+            }
+            @include is-sp{
+                @include font-line(20);
+            }
+        }
+    }
+
+
+}
+
+.precaution{
+    position: relative;
+    z-index: 1;
+    padding: 55px 0;
+    background-color: #111111;
+    color: white;
+    &__inner{}
+    &__top{
+        text-align:center;
+        h2{
+            color: white;
+            font-weight: 700;
+            @include font-line(22);
+            @include is-sp{
+            @include font-line(16);
+            }
+        }
+    }
+    &__bottom{
+
+        .o1{
+            margin-bottom: 30px;
+            &__title{
+                color: white;
+                font-weight: 700;
+                @include font-line(16);
+            }
+            h2{
+                color: white;
+                margin-left: -10px;
+                font-weight: 700;
+                letter-spacing: -1px;
+                @include font-line(16);
+                @include is-sp{
+                    @include font-line(14);
+                }
+            }
+            p{
+                white-space: pre-line;
+                color: white;
+                letter-spacing: -1px;
+                @include is-sp{
+                    @include font-line(14);
+                }
+            }
+
+        }
+        :last-child{
+            margin-bottom: 0;
         }
     }
 }

@@ -1,11 +1,15 @@
 .p-header{
-    // background:url(../../../../../tinified/common/header-background.png);
-    background:url(../../../../../../public/release/tinified/common/header-background.png);
+    background:url(../../../../../../public/release/img/common/bg.png);
     background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position:center;
     position:relative;
+    @supports not ( -webkit-touch-callout : none) {
+        background-attachment: fixed;
+    }
+    @supports ( -webkit-touch-callout : none) {
+        background-attachment:scroll;
+    }
     &__inner{
         display:flex;
         align-items:center;
@@ -15,22 +19,129 @@
     &__img{
         text-align:center;
         width: 100%;
-        &--title{}
-        &--logo{}
+        &--title{
+            img{
+                width:80%;
+            }
+            padding-bottom:50px;
+            @include is-pc{
+                padding-bottom:100px;
+            }
+        }
+        &--logo{
+            svg{
+                width:80%;
+
+            }
+        }
+
+        &--white{
+            svg{
+                position:absolute;
+                top:132px;
+                right: 50%;
+            }
+        }
     }
     .hashtag{
         position:absolute;
         top:9vh;
         left:7.2vw;
+        @include is-tablet{
+            top:4vh;
+        }
+        
+        @include is-sp{
+            top:20px;
+        }
         p{
             color:$colortext01;
+            @include is-sp{
+                @include font-line(14);
+            }
         }
     }
     .scroll{
-        position:fixed;
-        bottom:0;
-        left:50%;
-        transform: translateX(-50%);
-        z-index:0;
+
+        a{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: 0;
+            z-index: 0;
+            padding: 10px 10px 110px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            writing-mode: vertical-lr;
+            transition: .2s;
+            overflow: hidden;
+
+            @include is-sp{
+                font-size:12px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 15%;
+                transform: translate(-15%);
+                top: 5.8%;
+                width: 1px;
+                height: 100%;
+                background: #fff;
+            }
+            &:hover {
+                opacity: .5;
+            }
+            
+        }
+        a::after{
+            animation: sdl01 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+        @keyframes sdl01 {
+            0% {
+                transform: scale(1, 0);
+                transform-origin: 0 0;
+                opacity:0;
+            }
+            50% {
+                transform: scale(1, 1);
+                transform-origin: 0 0;
+                opacity:1;
+            }
+            50.1% {
+                transform: scale(1, 1);
+                transform-origin: 0 100%;
+            }
+            100% {
+                transform: scale(1, 0);
+                transform-origin: 0 100%;
+            }
+        }
+    }
+    .box{
+        position:absolute;
+        top:9vh;
+        right:0;
+        @include is-tablet{
+            top:4vh;
+        }
+        @include is-sp{
+            top:20px;
+        }
+        img{
+            padding:0.5em;
+        }
+
     }
 }
+
+#bg {
+  
+    /* Preserve aspect ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
