@@ -2,16 +2,14 @@
 @import "../core/**/*";
 
 
-html, body{
-    scroll-snap-type: y mandatory;
-    scroll-snap-type: mandatory;
-    scroll-behavior: smooth;
+html{
+    scroll-snap-type: both mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 section{
     scroll-snap-align: start;
 }
-
 
 .story{
     position:relative;
