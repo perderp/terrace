@@ -2,8 +2,10 @@
 @import "../core/**/*";
 
 
-html{
+html, body{
     scroll-snap-type: y mandatory;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
 }
 
 section{
