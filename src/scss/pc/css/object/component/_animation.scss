@@ -6,6 +6,15 @@
     animation: followThrough-out .3s linear both;
 }
 
+.spFollow-in{
+    animation: spFollow-in .3s linear both;
+}
+
+.spFollow-out{
+    animation: spFollow-out .3s linear both;
+}
+
+
 .line-top {
     &__01 {
         animation-name: first;
@@ -205,6 +214,23 @@
 
     100% {
         transform: scaleX(1);
+    }
+}
+
+@keyframes spFollow-in{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes spFollow-out{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
     }
 }
 

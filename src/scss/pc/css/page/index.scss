@@ -32,6 +32,9 @@ section{
     &__bottom{
         p{
             @include font-line(18);
+            @include is-tablet02{
+                @include font-line(16);
+            }
             @include is-sp{
                 @include font-line(14);
             }
@@ -91,10 +94,11 @@ section{
 }
 .sp-follow{
     width: 100%;
-    position: relative;
-    z-index: 1;
     &__inner{
+        z-index: 2;
+        position:fixed;
         width: 100%;
+        bottom:0;
     }
     .box{
         width: 20%;

@@ -2,9 +2,14 @@
     background:url(../../../../../../public/release/img/common/bg.png);
     background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position:center;
     position:relative;
+    @supports not ( -webkit-touch-callout : none) {
+        background-attachment: fixed;
+    }
+    @supports ( -webkit-touch-callout : none) {
+        background-attachment:scroll;
+    }
     &__inner{
         display:flex;
         align-items:center;
@@ -133,3 +138,10 @@
 
     }
 }
+
+#bg {
+  
+    /* Preserve aspect ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
