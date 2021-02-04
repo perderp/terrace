@@ -243,6 +243,10 @@ section{
                 @include font-line(16);
                 @include is-sp{
                     @include font-line(14);
+                    padding-bottom: 10px;
+                }
+                @include is-tablet{
+                    padding-bottom: 10px;
                 }
             }
             p{
