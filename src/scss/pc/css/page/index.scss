@@ -3,13 +3,14 @@
 
 
 html{
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: both mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 section{
     scroll-snap-align: start;
+    -webkit-overflow-scrolling: touch;
 }
-
 
 .story{
     position:relative;
@@ -90,6 +91,9 @@ section{
         @include is-pc02{
             width:27%;
         }
+        p{
+            padding:0 0.5em;
+        }
     }
 }
 .sp-follow{
@@ -114,6 +118,12 @@ section{
         align-items: center;
         justify-content: flex-end;
     }
+    p{
+        padding:0 1em;
+        @include is-sp{
+            padding:0 0.9em;
+        }
+    }
 }
 
 .info{
@@ -137,7 +147,8 @@ section{
     &__group{
         position: relative;
         width: 100%;
-        align-items: center;
+        align-items: baseline;
+        padding:2em 0;
         &::after{
             content:'';
             position: absolute;
@@ -158,10 +169,6 @@ section{
         }
     }
 
-    &__left,
-    &__right{
-        padding:2em 0;
-    }
     &__left{
         width: 18%;
         color:$colortext-secondary;

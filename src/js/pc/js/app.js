@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevY = pageY;
     pageY = window.pageYOffset;
 
-    console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
+    // console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
 
     // FOR RESERVATION 
     if (pageY >= 500) {
@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTopSp.style.display = "block";
       btnSp.classList.add('spFollow-in');
       btnSp.classList.remove('spFollow-out');
+
+      //STORY SECTION LINE
+      storyLines01.style.display="block";
+      storyLines02.style.display="block";
+      storyLines01.classList.add('story-above');
+      storyLines02.classList.add('story-below');
 
     }else if(!pageY == 500 && pageY >= 0){
       scrollTopSp.style.display="none";
@@ -52,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //STORY SECTION
-    if(pageY === storyClass){
+    if(pageY == storyClass){
       storyLines01.style.display="block";
       storyLines02.style.display="block";
       storyLines01.classList.add('story-above');
@@ -64,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btnSp.classList.remove('spFollow-in');
       btnSp.classList.add('spFollow-out');
     }
-
 
   };
 });
