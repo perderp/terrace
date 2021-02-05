@@ -2,8 +2,8 @@
 @import "../core/**/*";
 
 
-html{
-    scroll-snap-type: both mandatory;
+html,body,main{
+    scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -12,6 +12,7 @@ section{
 }
 
 .story{
+    scroll-snap-align: center !important;
     position:relative;
     z-index:1;
     padding-top:260px;
@@ -24,7 +25,7 @@ section{
         padding-top:145px;
         padding-bottom:174px;
     }
-    // overflow:hidden;
+    overflow:hidden;
     &__inner{}
     &__top{
         text-align:center;
