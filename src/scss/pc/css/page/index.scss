@@ -2,8 +2,8 @@
 @import "../core/**/*";
 
 
-html{
-    scroll-snap-type: both mandatory;
+html,body,main{
+    scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -12,6 +12,7 @@ section{
 }
 
 .story{
+    scroll-snap-align: center !important;
     position:relative;
     z-index:1;
     padding-top:260px;
@@ -118,10 +119,7 @@ section{
         justify-content: flex-end;
     }
     p{
-        padding:0 1em;
-        @include is-sp{
-            padding:0 0.9em;
-        }
+        padding-right:1em;
     }
 }
 
