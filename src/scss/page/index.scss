@@ -2,16 +2,19 @@
 @import "../core/**/*";
 
 
-html,body,main{
-    scroll-snap-type: y mandatory;
-}
+// html,body,main{
+//     scroll-snap-type: y mandatory;
+// }
 
-.p-header,.p-footer,.story,
-.info,.precaution{
-    scroll-snap-align: start;
-    -webkit-overflow-scrolling: touch;
-    overflow: hidden;
-}
+// .p-header,.p-footer,.story,
+// .info,.precaution{
+//     scroll-snap-align: start;
+//     -webkit-overflow-scrolling: touch;
+//     overflow: hidden;
+// }
+// .story,.info,.precaution{
+//     padding:0 !important;
+// }
 
 /***
 ====================================
@@ -22,16 +25,16 @@ html,body,main{
     scroll-snap-align: center !important;
     position:relative;
     z-index:1;
-    padding-top:275px;
-    padding-bottom:280px;
-    @include is-tablet{
-        padding-top:145px;
-        padding-bottom:174px;
-    }
-    @include is-sp{
-        padding-top:145px;
-        padding-bottom:174px;
-    }
+    // padding-top:275px;
+    // padding-bottom:280px;
+    // @include is-tablet{
+    //     padding-top:145px;
+    //     padding-bottom:174px;
+    // }
+    // @include is-sp{
+    //     padding-top:145px;
+    //     padding-bottom:174px;
+    // }
     overflow:hidden;
     &__inner{}
     &__top{
@@ -57,11 +60,11 @@ html,body,main{
             top:200px;
 
             @include is-tablet{
-                top:60px;
+                top:120px;
             }
 
             @include is-sp{
-                top:60px;
+                top:120px;
             }
 
         }
@@ -71,11 +74,11 @@ html,body,main{
             right:50%;
 
             @include is-tablet{
-                bottom:82px;
+                bottom:120px;
             }
 
             @include is-sp{
-                bottom:82px;
+                bottom:120px;
             }
 
         }
@@ -142,13 +145,13 @@ html,body,main{
 .info{
     position:relative;
     z-index:1;
-    padding-bottom:175px;
-    @include is-tablet{
-        padding-bottom:64px;
-    }
-    @include is-sp{
-        padding-bottom:64px;
-    }
+    padding-bottom:64px;
+    // @include is-tablet{
+    //     padding-bottom:64px;
+    // }
+    // @include is-sp{
+    //     padding-bottom:64px;
+    // }
     &__inner{}
     &__top{
         text-align: center;

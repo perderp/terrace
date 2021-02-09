@@ -7,13 +7,15 @@
     <title>Terrace</title>
     <!--main css-->
     <link rel="stylesheet" href="public/css/common.css" />
-
+    <!-- page css-->
     <link rel="stylesheet" href="public/css/page/index.css" />
+    <!-- fullpage css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
 </head>
 
 <body>
-    <main>
-        <section class="p-header ">
+    <main id="fullpage">
+        <section class="p-header section" data-anchor="terrace01">
             <div class="l-wrap">
                 <div class="l-container p-header__inner">
                     <div class="p-header__img">
@@ -131,7 +133,7 @@
                 </div>
             </div>
         </section>
-        <section class="story ">
+        <section class="story section" data-anchor="story">
             <div class="story__above">
                 <svg xmlns="http://www.w3.org/2000/svg" width="544.5" height="60.5" viewBox="0 0 544.5 60.5"
                     class="story-svg__top" style="">
@@ -181,7 +183,7 @@
                 <p>予約する</p>
             </a>
         </div>
-        <section class="info ">
+        <section class="info section" data-anchor="information">
             <div class="l-wrap">
                 <div class="l-container info__inner">
                     <div class="info__top">
@@ -223,7 +225,7 @@
                 </div>
             </div>
         </section>
-        <section class="precaution ">
+        <section class="precaution section" data-anchor="precaution">
             <div class="l-wrap">
                 <div class="l-container precaution__inner">
                     <div class="precaution__top">
@@ -285,7 +287,7 @@
                 </div>
             </div>
         </section>
-        <section class="p-footer ">
+        <section class="p-footer section fp-auto-height" data-anchor="terrace02">
             <div class="hashtag u-d-n-pc">
                 <p>#sasuna2.0</p>
                 <p>#滋賀県初完全貸切サウナ</p>
@@ -327,6 +329,18 @@
     </main>
     <!-- MAIN JS-->
     <script type="text/javascript" src="public/js/all.js"></script>
-    
-
+    <!-- fullpage js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
+    <script>
+        new fullpage('#fullpage',{
+            autoscrolling:true,
+            anchors:['terrace01','story','information','precaution','terrace02'],
+            css3: true,
+	        scrollingSpeed: 200,
+            fitToSection: true,
+            scrollBar: true,
+            normalScrollElements: '.precaution',
+            
+        })
+    </script>
 </html>
