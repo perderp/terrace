@@ -2,16 +2,16 @@
 @import "../core/**/*";
 
 
-html,body,main{
-    scroll-snap-type: y mandatory;
-}
+// html,body,main{
+//     scroll-snap-type: y mandatory;
+// }
 
-.p-header,.p-footer,.story,
-.info,.precaution{
-    scroll-snap-align: start;
-    -webkit-overflow-scrolling: touch;
-    overflow: hidden;
-}
+// .p-header,.p-footer,.story,
+// .info,.precaution{
+//     scroll-snap-align: start;
+//     -webkit-overflow-scrolling: touch;
+//     overflow: hidden;
+// }
 
 /***
 ====================================
