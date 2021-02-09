@@ -57,29 +57,29 @@
         &__top{
             position:absolute;
             left:50%;
-            top:200px;
+            top:150px;
 
-            @include is-tablet{
-                top:120px;
-            }
+            // @include is-tablet{
+            //     top:120px;
+            // }
 
-            @include is-sp{
-                top:120px;
-            }
+            // @include is-sp{
+            //     top:120px;
+            // }
 
         }
         &__bottom{
             position: absolute;
-            bottom:200px;
+            bottom:150px;
             right:50%;
 
-            @include is-tablet{
-                bottom:120px;
-            }
+            // @include is-tablet{
+            //     bottom:120px;
+            // }
 
-            @include is-sp{
-                bottom:120px;
-            }
+            // @include is-sp{
+            //     bottom:120px;
+            // }
 
         }
     }
@@ -146,9 +146,9 @@
     position:relative;
     z-index:1;
     padding-bottom:64px;
-    // @include is-tablet{
-    //     padding-bottom:64px;
-    // }
+    @include is-tablet{
+        padding-bottom:0;
+    }
     // @include is-sp{
     //     padding-bottom:64px;
     // }
