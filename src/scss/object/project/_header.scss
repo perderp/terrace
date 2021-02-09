@@ -1,5 +1,6 @@
 .p-header{
-    background:url(../../../../../../public/release/img/common/bg.png);
+    // background:url(../../../../public/img/common/bg.png);
+    background:url(../../public/img/common/bg.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-position:center bottom;
@@ -138,10 +139,3 @@
 
     }
 }
-
-#bg {
-  
-    /* Preserve aspect ratio */
-    min-width: 100%;
-    min-height: 100%;
-  }
