@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevY = pageY;
     pageY = window.pageYOffset;
 
-    // console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
+    console.log('prevY = ' + window.pageYOffset + 'currentY = ' + document.body.offsetTop);
 
     // FOR RESERVATION 
     if (pageY >= 500) {

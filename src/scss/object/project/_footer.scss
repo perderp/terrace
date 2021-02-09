@@ -1,8 +1,8 @@
 .p-footer{
-    background:url(../../public/img/common/bg.png);
+    background:url(../../public/img/common/bg.png) !important;
     background-size:cover;
     background-repeat: no-repeat;
-    background-position:center bottom;
+    background-position:center bottom !important;
     position:relative;
     @supports not ( -webkit-touch-callout : none) {
         background-attachment: fixed;
