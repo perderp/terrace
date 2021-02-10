@@ -53,34 +53,43 @@
         }
     }
     &__animate{}
-
+    &__above,
+    &__below{
+        position:relative;
+    }
     .story-svg{
         &__top{
             position:absolute;
             left:50%;
-            top:7vw;
-
-            @include is-tablet{
-                top:120px;
-            }
-
+            bottom:0;
             @include is-sp{
-                top:3vw;
+                top:-40px;
             }
+            // top:7vw;
+
+            // @include is-tablet{
+            //     top:120px;
+            // }
+
+            // @include is-sp{
+            //     top:5vw;
+            // }
 
         }
         &__bottom{
             position: absolute;
-            bottom:7vw;
             right:50%;
-
-            @include is-tablet{
-                bottom:120px;
-            }
-
+            top:0;
             @include is-sp{
-                bottom:3vw;
+                top:-13px;
             }
+            // @include is-tablet{
+            //     bottom:120px;
+            // }
+
+            // @include is-sp{
+            //     bottom:5vw;
+            // }
 
         }
     }
