@@ -12,9 +12,10 @@
 //     -webkit-overflow-scrolling: touch;
 //     overflow: hidden;
 // }
-// .story,.info,.precaution{
-//     padding:0 !important;
-// }
+.story,.info,.precaution{
+    padding:0 !important;
+    height:100vh !important;
+}
 
 /***
 ====================================
@@ -59,13 +60,13 @@
             left:50%;
             top:150px;
 
-            // @include is-tablet{
-            //     top:120px;
-            // }
+            @include is-tablet{
+                top:120px;
+            }
 
-            // @include is-sp{
-            //     top:120px;
-            // }
+            @include is-sp{
+                top:10%;
+            }
 
         }
         &__bottom{
@@ -73,13 +74,13 @@
             bottom:150px;
             right:50%;
 
-            // @include is-tablet{
-            //     bottom:120px;
-            // }
+            @include is-tablet{
+                bottom:120px;
+            }
 
-            // @include is-sp{
-            //     bottom:120px;
-            // }
+            @include is-sp{
+                bottom:10%;
+            }
 
         }
     }
@@ -145,16 +146,17 @@
 .info{
     position:relative;
     z-index:1;
-    padding-bottom:64px;
-    @include is-tablet{
-        padding-bottom:0;
-    }
+    padding-bottom:64px !important;
+    // @include is-tablet{
+    //     padding-bottom:0;
+    // }
     // @include is-sp{
     //     padding-bottom:64px;
     // }
     &__inner{}
     &__top{
         text-align: center;
+        padding-bottom:10px;
     }
     &__bottom{}
     &__table{
@@ -164,7 +166,13 @@
         position: relative;
         width: 100%;
         align-items: baseline;
-        padding:2em 0;
+        padding:1em 0;
+        @include is-pc02{
+            padding:1em 0;
+        }
+        @include is-pc{
+            padding:2em 0;
+        }
         &::after{
             content:'';
             position: absolute;
@@ -238,7 +246,7 @@
 .precaution{
     position: relative;
     z-index: 1;
-    padding: 55px 0;
+    padding: 55px 0 !important;
     background-color: #111111;
     color: white;
     &__inner{}
