@@ -127,8 +127,35 @@
                     <div class="scroll">
                         <a href="">Scroll</a>
                     </div>
-                    <div class="box u-d-n-pc ">
+                    <div id="Btn" class="box">
                         <img src="public/img/common/header-3line.png" alt="">
+                    </div>
+                    <div class="Modal" id="Modal">
+                        <div class="Modal-content">
+                            <span class="close"><img src="public/img/common/close.svg" alt=""><span>Close</span></span>
+                            <div class="Modal__top u-d-n-sp u-d-n-tablet">
+                                <img src="public/img/common/icon-twitter-red.svg" alt="twitter">
+                                <img src="public/img/common/icon-insta-red.svg" alt="instagram">
+                            </div>
+                            <div class="title"><img src="public/img/common/menu.svg" alt="Menu"></div>
+                            <div class="linereverse"><img src="public/img/common/line.svg" alt="line"></div>
+                                <a href=""><img src="public/img/common/menu-story.svg" alt="Story"></a>
+                            <div class="line"><img src="public/img/common/line.svg" alt="line"></div>
+                                <a href=""><img src="public/img/common/menu-information.svg" alt="Information"></a>
+                            <div class="linereverse"><img src="public/img/common/line.svg" alt="line"></div>
+                                <a href=""><img src="public/img/common/menu-precaution.svg" alt="Precaution"></a>
+                            <div class="line"><img src="public/img/common/line.svg" alt="line"></div>
+                            <div class="Modal__bottom u-d-n-pc">
+                                <img src="public/img/common/icon-twitter-red.svg" alt="twitter">
+                                <img src="public/img/common/icon-insta-red.svg" alt="instagram">
+                            </div>
+                            <div class="btn">
+                                <a href="" class="c-btn2">
+                                    <p>予約する</p>
+                                    <img src="public/img/common/btn.png" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,7 +190,7 @@
                 </svg>
             </div>
         </section>
-        <div class="sp-follow u-d-n-pc">
+        <div class="sp-follow u-d-n-pc u-d-n-tablet">
             <div class="l-wrap--fluid">
                 <div class="sp-follow__inner u-d-f ">
                     <div class="box u-d-f">
@@ -331,6 +358,8 @@
     <script type="text/javascript" src="public/js/all.js"></script>
     <!-- fullpage js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
+    
     <script>
         new fullpage('#fullpage',{
             autoscrolling:true,
@@ -342,5 +371,30 @@
             normalScrollElements: '.precaution',
             
         })
+
+            var modal = document.getElementById("Modal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("Btn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
     </script>
 </html>
