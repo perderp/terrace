@@ -154,7 +154,7 @@
         &-content{
             background-color: #000000;
             margin: 7% auto; /* 15% from the top and centered */
-            max-width: 926.22px;
+            max-width: 800px;
             @include is-sp{
                 max-width: 380px;
             }
@@ -187,11 +187,15 @@
         }
         .line{
             display: flex;
+
             @include is-tablet{
                 width: 80%;
             }
             @include is-sp{
                 width: 80%;
+                background-color: #fff;
+                height: 1px;
+                
 
             }
         }
@@ -203,8 +207,11 @@
                 margin: 0 0 0 auto;
             }
             @include is-sp{
+            background-color: #fff;
                 width: 80%;
                 margin: 0 0 0 auto;
+                height: 1px;
+                z-index: 999;
             }
         }
 
