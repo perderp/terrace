@@ -130,6 +130,7 @@
         position:absolute;
         top:9vh;
         right:0;
+        cursor:pointer;
         @include is-tablet{
             top:4vh;
         }
@@ -163,7 +164,7 @@
             }
             h2{
                 text-align: center;
-                color: #fff;
+                color: #fff;    
                 @include font-line(41);
             }
         }
