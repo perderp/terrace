@@ -65,7 +65,7 @@
             }
 
             @include is-sp{
-                top:10%;
+                top:3vw;
             }
 
         }
@@ -79,7 +79,7 @@
             }
 
             @include is-sp{
-                bottom:10%;
+                bottom:3vw;
             }
 
         }
@@ -119,6 +119,7 @@
         position:fixed;
         width: 100%;
         bottom:0;
+        height: 12.3vh;
     }
     .box{
         width: 20%;

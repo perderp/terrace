@@ -17,7 +17,13 @@
 .c-btn2{
     background-color:#B50000;
     padding:1em;
+    display: flex;
+    justify-content: center;
+    @include is-sp{
+        justify-content: space-around;
+    }
     p{
+        margin-left: 60px;
         color:$colortext01;
         @include font-line(40);
         font-weight: 700;

@@ -180,18 +180,34 @@
             display: flex;
             justify-content: center;
             margin-bottom: 75px;
+            img{
+                @include is-sp{
+                    width: 35%;
+                }
+            }
             @include is-sp{
                 margin-bottom: 0;
-                padding: 55px 0;
+                padding: 35px 0;
             }
         }
-        a{
+        .links{
             display: flex;
             justify-content: center;
             padding: 25px 0 20px 0;
             @include is-sp{
                 padding: 20px 0 15px 0;
             }
+            .svg-story{
+                @include is-sp{
+                    width: 15%;
+                }
+            }
+            img{
+                @include is-sp{
+                    width: 25%;
+                }
+            }
+
         }
         .line{
             display: flex;
@@ -230,6 +246,10 @@
             img{
                 margin:45px 0;
                 padding-right: 10px;
+                @include is-sp{
+                    margin: 25px 0;
+                    width: 20%;
+                }
             }
         }
 
@@ -258,6 +278,9 @@
         }
         @include is-sp{
             padding: 20px 20px 0 0;
+        }
+        .mg-r-6{
+            margin-right: 6px;
         }
     }
     .close:hover,
