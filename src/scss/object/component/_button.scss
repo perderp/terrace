@@ -13,3 +13,19 @@
         }
     }
 }
+
+.c-btn2{
+    background-color:#B50000;
+    padding:1em;
+    p{
+        color:$colortext01;
+        @include font-line(40);
+        font-weight: 700;
+        @include is-pc02{
+            font-size:3vw;
+        }
+        @include is-sp{
+            @include font-line(30);
+        }
+    }
+}

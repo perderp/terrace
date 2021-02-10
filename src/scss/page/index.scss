@@ -58,7 +58,7 @@
         &__top{
             position:absolute;
             left:50%;
-            top:150px;
+            top:7vw;
 
             @include is-tablet{
                 top:120px;
@@ -71,7 +71,7 @@
         }
         &__bottom{
             position: absolute;
-            bottom:150px;
+            bottom:7vw;
             right:50%;
 
             @include is-tablet{
