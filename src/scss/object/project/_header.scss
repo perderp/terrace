@@ -181,13 +181,17 @@
             justify-content: center;
             margin-bottom: 75px;
             @include is-sp{
-                padding-top: 55px;
+                margin-bottom: 0;
+                padding: 55px 0;
             }
         }
         a{
             display: flex;
             justify-content: center;
             padding: 25px 0 20px 0;
+            @include is-sp{
+                padding: 20px 0 15px 0;
+            }
         }
         .line{
             display: flex;
@@ -251,6 +255,9 @@
         span{
             color: #fff;
             @include font-line(16);
+        }
+        @include is-sp{
+            padding: 20px 20px 0 0;
         }
     }
     .close:hover,
