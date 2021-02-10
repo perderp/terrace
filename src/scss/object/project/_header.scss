@@ -144,7 +144,7 @@
     .Modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
-        z-index: 99; /* Sit on top */
+        z-index: 20; /* Sit on top */
         left: 0;
         top: 0;
         width: 100%; /* Full width */
@@ -155,8 +155,8 @@
         padding: 0 20px;
 
         &-content{
-            background-color: #000000;
-            margin: 7% auto; /* 15% from the top and centered */
+            background-color: #000000; 
+            margin: 3% auto;
             max-width: 800px;
             @include is-sp{
                 max-width: 380px;
