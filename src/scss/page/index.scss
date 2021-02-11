@@ -166,7 +166,6 @@
     &__inner{}
     &__top{
         text-align: center;
-        padding-bottom:10px;
     }
     &__bottom{}
     &__table{
@@ -176,7 +175,7 @@
         position: relative;
         width: 100%;
         align-items: baseline;
-        padding:1em 0;
+        padding:26px 0;
         @include is-pc02{
             padding:1em 0;
         }
@@ -201,6 +200,9 @@
                 width:20vw;
             }
         }
+    }
+    &__group:first-child{
+        padding-top:0;
     }
 
     &__left{

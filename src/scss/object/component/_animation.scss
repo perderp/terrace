@@ -18,7 +18,7 @@
 .line-top {
     &__01 {
         animation-name: first;
-        animation-duration: 1.5s;
+        animation-duration: 0.2s;
         animation-timing-function: cubic-bezier(.54,0,.29,1);
         transform-origin: bottom;
         transform-box: fill-box;
@@ -28,7 +28,7 @@
 
     &__02 {
         animation-name: second;
-        animation-duration: 1.5s;
+        animation-duration: 0.2s;
         animation-timing-function: cubic-bezier(.54,0,.29,1);
         transform-origin: right;
         transform-box: fill-box;
@@ -39,31 +39,88 @@
 
     &__03 {
         animation-name: first;
-        animation-duration: 1.5s;
+        animation-duration: 0.2s;
         animation-timing-function: cubic-bezier(.54,0,.29,1);
         transform-origin: bottom;
         transform-box: fill-box;
         transform: scaleY(0);
         animation-fill-mode: forwards;
-        animation-delay:0.6s;
+        animation-delay:0.4s;
     }
 
     &__04 {
         animation-name: second;
-        animation-duration: 1.5s;
+        animation-duration: 0.2s;
         animation-timing-function: cubic-bezier(.54,0,.29,1);
         transform-origin: left;
         transform-box: fill-box;
         transform: scaleX(0);
         animation-fill-mode: forwards;
-        animation-delay:0.9s;
+        animation-delay:0.5s;
     }
 
     &__05 {
         animation-name: first;
-        animation-duration: 1.5s;
+        animation-duration: 0.2s;
         animation-timing-function: cubic-bezier(.54,0,.29,1);
         transform-origin: top;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:.6s;
+    }
+}
+
+.line-bottom {
+    &__01 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: top;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:.7s;
+    }
+
+    &__02 {
+        animation-name: second;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: left;
+        transform-box: fill-box;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-delay:.8s;
+    }
+
+    &__03 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: bottom;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:.9s;
+    }
+
+    &__04 {
+        animation-name: second;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: right;
+        transform-box: fill-box;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-delay:1s;
+    }
+
+    &__05 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: bottom;
         transform-box: fill-box;
         transform: scaleY(0);
         animation-fill-mode: forwards;
@@ -71,77 +128,20 @@
     }
 }
 
-.line-bottom {
-    &__01 {
-        animation-name: first;
-        animation-duration: 1.5s;
-        animation-timing-function: cubic-bezier(.54,0,.29,1);
-        transform-origin: top;
-        transform-box: fill-box;
-        transform: scaleY(0);
-        animation-fill-mode: forwards;
-        animation-delay:1.5s;
-    }
-
-    &__02 {
-        animation-name: second;
-        animation-duration: 1.5s;
-        animation-timing-function: cubic-bezier(.54,0,.29,1);
-        transform-origin: left;
-        transform-box: fill-box;
-        transform: scaleX(0);
-        animation-fill-mode: forwards;
-        animation-delay:1.8s;
-    }
-
-    &__03 {
-        animation-name: first;
-        animation-duration: 1.5s;
-        animation-timing-function: cubic-bezier(.54,0,.29,1);
-        transform-origin: bottom;
-        transform-box: fill-box;
-        transform: scaleY(0);
-        animation-fill-mode: forwards;
-        animation-delay:2.1s;
-    }
-
-    &__04 {
-        animation-name: second;
-        animation-duration: 1.5s;
-        animation-timing-function: cubic-bezier(.54,0,.29,1);
-        transform-origin: right;
-        transform-box: fill-box;
-        transform: scaleX(0);
-        animation-fill-mode: forwards;
-        animation-delay:2.4s;
-    }
-
-    &__05 {
-        animation-name: first;
-        animation-duration: 1.5s;
-        animation-timing-function: cubic-bezier(.54,0,.29,1);
-        transform-origin: bottom;
-        transform-box: fill-box;
-        transform: scaleY(0);
-        animation-fill-mode: forwards;
-        animation-delay:2.7s;
-    }
-}
-
 
 .sauna{
     animation:appear 1s linear both;
-    animation-delay:3s;
+    animation-delay:1.3s;
     opacity:0;
 }
 .rooftop{
     animation:appear 1s linear both;
-    animation-delay:3s;
+    animation-delay:1.3s;
     opacity:0;
 }
 .logo{
     animation:appear 1s linear both;
-    animation-delay:3.3s;
+    animation-delay:1.4s;
     opacity:0;
 }
 
