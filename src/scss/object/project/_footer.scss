@@ -12,11 +12,14 @@
     }
     &__inner{}
     &__top{}
-    &__bottom{}
+    &__bottom{
+        margin-top:90px;
+        margin-bottom:60px;
+    }
     &__img{
         text-align:center;
         img{
-            width:70%;
+            width:50%;
         }
     }
     .copyright{
