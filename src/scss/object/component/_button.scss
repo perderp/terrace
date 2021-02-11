@@ -24,7 +24,7 @@
         justify-content: space-around;
     }
     p{
-        margin-left: 60px;
+        margin: 0 0.5em;
         color:$colortext01;
         @include font-line(40);
         font-weight: 700;

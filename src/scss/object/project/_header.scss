@@ -261,6 +261,9 @@
         }
 
         .btn{
+            display: flex;
+            justify-content: center;
+            background-color:#B50000;
             margin-top: 80px;
             @include is-tablet{
                 margin-top: 0;
