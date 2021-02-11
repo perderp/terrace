@@ -161,16 +161,14 @@
         padding: 0 20px;
 
         &-content{
-            background-color:rgba(0, 0, 0, 0.5);; 
-            margin: 10% auto;
+            background-color:rgba(0, 0, 0, 0.7); 
             max-width: 800px;
-            @include is-tablet{
-                margin: 20% auto;
-            }
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             @include is-sp{
                 max-width: 380px;
-                margin: 25% auto;
-
             }
             h2{
                 text-align: center;
