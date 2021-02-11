@@ -54,6 +54,7 @@
         
         @include is-sp{
             top:20px;
+            left:20px;
         }
         p{
             color:$colortext01;
@@ -70,7 +71,10 @@
             transform: translate(-50%);
             bottom: 0;
             z-index: 0;
-            padding: 10px 10px 3vw;
+            padding: 10px 10px 5vw;
+            @include is-tablet{
+                padding:10px 10px 110px;
+            }
             @include is-sp{
                 padding:10px 10px 110px;
             }
@@ -136,6 +140,7 @@
         }
         @include is-sp{
             top:20px;
+            right:20px;
         }
         img{
             padding:0.5em;

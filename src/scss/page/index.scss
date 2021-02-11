@@ -1,17 +1,6 @@
 @charset "UTF-8";
 @import "../core/**/*";
 
-
-// html,body,main{
-//     scroll-snap-type: y mandatory;
-// }
-
-// .p-header,.p-footer,.story,
-// .info,.precaution{
-//     scroll-snap-align: start;
-//     -webkit-overflow-scrolling: touch;
-//     overflow: hidden;
-// }
 .story,.info,.precaution{
     padding:0 !important;
     height:100vh !important;
@@ -61,35 +50,16 @@
         &__top{
             position:absolute;
             left:50%;
-            bottom:0;
+            bottom:34px;
             @include is-sp{
-                top:-40px;
+                bottom:34px;
             }
-            // top:7vw;
-
-            // @include is-tablet{
-            //     top:120px;
-            // }
-
-            // @include is-sp{
-            //     top:5vw;
-            // }
 
         }
         &__bottom{
             position: absolute;
             right:50%;
-            top:0;
-            @include is-sp{
-                top:-13px;
-            }
-            // @include is-tablet{
-            //     bottom:120px;
-            // }
-
-            // @include is-sp{
-            //     bottom:5vw;
-            // }
+            top:50px;
 
         }
     }
@@ -177,10 +147,13 @@
         align-items: baseline;
         padding:26px 0;
         @include is-pc02{
-            padding:1em 0;
+            padding:26px 0;
         }
         @include is-pc{
             padding:2em 0;
+        }
+        @include is-sp{
+            padding:36px 0;
         }
         &::after{
             content:'';
@@ -202,7 +175,12 @@
         }
     }
     &__group:first-child{
-        padding-top:0;
+        @include is-pc{
+            padding-top:0;
+        }
+        @include is-tablet{
+            padding-top:0;
+        }
     }
 
     &__left{
