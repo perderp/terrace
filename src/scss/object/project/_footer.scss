@@ -13,8 +13,10 @@
     &__inner{}
     &__top{}
     &__bottom{
-        margin-top:90px;
-        margin-bottom:60px;
+        margin:90px 0 60px 0;
+        @include is-sp{
+            margin:155px 0 140px 0;
+        }
     }
     &__img{
         text-align:center;
@@ -38,7 +40,7 @@
         justify-content: center;
         .instagram,
         .twitter
-        {
+        {   text-align:center;
             padding:0 1em;
             img{
                 width:80%
